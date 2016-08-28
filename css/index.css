@@ -19,13 +19,17 @@ header p{
 #continue{
     text-decoration:none;
     color:white;
-    background-color:#C5B883;
+    background-color:#669999;
     padding:10px 20px;
     border-radius:10px;
 }
 .new-game:hover{
-    background-color: #B4A569;
+    background-color: #336666;
+    /*清除手机端点击时出现的边框*/
+    -webkit-tap-highlight-color:transparent;
+
 }
+
 #grid-container{
     width:380px;
     z-index: 0;
