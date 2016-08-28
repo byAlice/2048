@@ -75,12 +75,81 @@ function canMoveUp() {
     }
     return false;
 }
+function canMoveDown() {
+    for(var j=0;j<4;j++){
+        for(var i=2;i>=0;i--){
+            if(board[i][j]!=0){
+                if(board[i+1][j]==0||board[i+1][j]==board[i][j]){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+function canMoveLeft() {
+    for(var i=0;i<4;i++){
+        for(var j=1;j<4;j++){
+            if(board[i][j]!=0){
+                if(board[i][j-1]==0||board[i][j-1]==board[i][j]){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+function canMoveRight() {
+    for(var i=0;i<4;i++){
+        for(var j=2;j>=0;j--){
+            if(board[i][j]!=0){
+                if(board[i][j+1]==0||board[i][j+1]==board[i][j]){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
 function noMove(board) {
     if(canMoveLeft()||canMoveRight()||canMoveUp()||canMoveDown()){
         return false;   //说明可以移动
     }
     return true;    //否则不能移动
 }
+function noUpBlock(i,j,k,board){
+    for(var m=k+1;m<i;m++){
+        if(board[m][j]!=0){
+            return false;   //有障碍
+        }
+    }
+    return true;    //无障碍
+}
+function noDownBlock(i,j,k,board){
+    for(var m=k-1;m>i;m--){
+        if(board[m][j]!=0){
+            return false;   //有障碍
+        }
+    }
+    return true;    //无障碍
+}
+function noLeftBlock(i,j,k,board){
+    for(var m=k+1;m<j;m++){
+        if(board[i][m]!=0){
+            return false;   //有障碍
+        }
+    }
+    return true;    //无障碍
+}
+function noRightBlock(i,j,k,board){
+    for(var m=k-1;m>j;m--){
+        if(board[i][m]!=0){
+            return false;   //有障碍
+        }
+    }
+    return true;    //无障碍
+}
+
 /*
 //
 检测是电脑端还是手机端访问

@@ -21,7 +21,7 @@ function showNumberWithAnimation(randomX,randomY,randomNumber){
         height:cellSideLength,
         top:getPosTop(randomX,randomY),
         left:getPosLeft(randomX,randomY)
-    },100);
+    },200);
 }
 function showMoveAnimation(fromX,fromY,toX,toY) {
     var numberCell=$('#number-cell-'+fromX+'-'+fromY);
