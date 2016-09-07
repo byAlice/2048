@@ -117,7 +117,7 @@ function noMove(board) {
     }
     return true;    //否则不能移动
 }
-function noUpBlock(i,j,k,board){
+/*function noUpBlock(i,j,k,board){
     for(var m=k+1;m<i;m++){
         if(board[m][j]!=0){
             return false;   //有障碍
@@ -148,9 +148,8 @@ function noRightBlock(i,j,k,board){
         }
     }
     return true;    //无障碍
-}
-/*
-*判断水平方向和竖直方向上有没有障碍物
+}*/
+/*判断水平方向和竖直方向上有没有障碍物*/
 
 function noBlockHorizontal( row , col1 , col2 , board ){
  for( var i = col1 + 1 ; i < col2 ; i ++ )
@@ -165,7 +164,7 @@ function noBlockHorizontal( row , col1 , col2 , board ){
  return false;
  return true;
  }
- */
+
 
 /*
 //
