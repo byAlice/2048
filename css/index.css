@@ -41,6 +41,7 @@ header p{
     position:relative;
 }
 .grid-cell{
+    /*绝对定位会改变堆叠顺序*/
     z-index:-2;
     width:80px;
     height:80px;
